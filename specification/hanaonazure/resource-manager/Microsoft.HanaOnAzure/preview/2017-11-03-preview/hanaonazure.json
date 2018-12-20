@@ -194,6 +194,45 @@
                     }
                 }
             }
+        },
+        "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.HanaOnAzure/hanaInstances/{hanaInstanceName}/restart": {
+            "post": {
+                "tags": [
+                    "HanaOnAzure"
+                ],
+                "operationId": "HanaInstances_Restart",
+                "description": "The operation to restart a SAP HANA instance.",
+                "x-ms-examples": {
+                    "Restart a HANA instance": {
+                        "$ref": "./examples/HanaInstances_Restart.json"
+                    }
+                },
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/ApiVersionParameter"
+                    },
+                    {
+                        "$ref": "#/parameters/SubscriptionIdParameter"
+                    },
+                    {
+                        "$ref": "#/parameters/ResourceGroupNameParameter"
+                    },
+                    {
+                        "$ref": "#/parameters/HanaInstanceNameParameter"
+                    }
+                ],
+                "responses": {
+                    "202": {
+                        "description": "Accepted"
+                    }
+                }
+            }
         }
     },
     "definitions": {
@@ -331,6 +370,7 @@
                         "S192",
                         "S192m",
                         "S192xm",
+                        "S96",
                         "S384",
                         "S384m",
                         "S384xm",
@@ -433,7 +473,7 @@
                     "description": "Specifies the IP address of the network interface."
                 }
             },
-            "description": "Specifies the IP address of the network interaface."
+            "description": "Specifies the IP address of the network interface."
         },
         "OperationList": {
             "type": "object",

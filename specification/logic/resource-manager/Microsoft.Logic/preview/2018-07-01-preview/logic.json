@@ -1993,6 +1993,296 @@
         }
       }
     },
+    "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Logic/workflows/{workflowName}/runs/{runName}/actions/{actionName}/repetitions/{repetitionName}/requestHistories": {
+      "get": {
+        "tags": [
+          "WorkflowRunActions"
+        ],
+        "operationId": "WorkflowRunActionRepetitionsRequestHistories_List",
+        "description": "List a workflow run repetition request history.",
+        "x-ms-examples": {
+          "List repetition request history": {
+            "$ref": "./examples/WorkflowRunActionRepetitionsRequestHistories_List.json"
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/parameters/subscriptionId"
+          },
+          {
+            "name": "resourceGroupName",
+            "description": "The resource group name.",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "workflowName",
+            "description": "The workflow name.",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "runName",
+            "description": "The workflow run name.",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "actionName",
+            "description": "The workflow action name.",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "repetitionName",
+            "description": "The workflow repetition.",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "$ref": "#/parameters/api-version"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/RequestHistoryListResult"
+            }
+          },
+          "default": {
+            "description": "Error response describing why the operation failed.",
+            "schema": {
+              "$ref": "#/definitions/ErrorResponse"
+            }
+          }
+        },
+        "x-ms-pageable": {
+          "nextLinkName": "nextLink"
+        }
+      }
+    },
+    "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Logic/workflows/{workflowName}/runs/{runName}/actions/{actionName}/repetitions/{repetitionName}/requestHistories/{requestHistoryName}": {
+      "get": {
+        "tags": [
+          "WorkflowRunActions"
+        ],
+        "operationId": "WorkflowRunActionRepetitionsRequestHistories_Get",
+        "description": "Gets a workflow run repetition request history.",
+        "x-ms-examples": {
+          "Get a repetition request history": {
+            "$ref": "./examples/WorkflowRunActionRepetitionsRequestHistories_Get.json"
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/parameters/subscriptionId"
+          },
+          {
+            "name": "resourceGroupName",
+            "description": "The resource group name.",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "workflowName",
+            "description": "The workflow name.",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "runName",
+            "description": "The workflow run name.",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "actionName",
+            "description": "The workflow action name.",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "repetitionName",
+            "description": "The workflow repetition.",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "requestHistoryName",
+            "description": "The request history name.",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "$ref": "#/parameters/api-version"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/RequestHistory"
+            }
+          },
+          "default": {
+            "description": "Error response describing why the operation failed.",
+            "schema": {
+              "$ref": "#/definitions/ErrorResponse"
+            }
+          }
+        }
+      }
+    },
+    "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Logic/workflows/{workflowName}/runs/{runName}/actions/{actionName}/requestHistories": {
+      "get": {
+        "tags": [
+          "WorkflowRunActions"
+        ],
+        "operationId": "WorkflowRunActionRequestHistories_List",
+        "description": "List a workflow run request history.",
+        "x-ms-examples": {
+          "List a request history": {
+            "$ref": "./examples/WorkflowRunActionRequestHistories_List.json"
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/parameters/subscriptionId"
+          },
+          {
+            "name": "resourceGroupName",
+            "description": "The resource group name.",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "workflowName",
+            "description": "The workflow name.",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "runName",
+            "description": "The workflow run name.",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "actionName",
+            "description": "The workflow action name.",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "$ref": "#/parameters/api-version"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/RequestHistoryListResult"
+            }
+          },
+          "default": {
+            "description": "Error response describing why the operation failed.",
+            "schema": {
+              "$ref": "#/definitions/ErrorResponse"
+            }
+          }
+        },
+        "x-ms-pageable": {
+          "nextLinkName": "nextLink"
+        }
+      }
+    },
+    "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Logic/workflows/{workflowName}/runs/{runName}/actions/{actionName}/requestHistories/{requestHistoryName}": {
+      "get": {
+        "tags": [
+          "WorkflowRunActions"
+        ],
+        "operationId": "WorkflowRunActionRequestHistories_Get",
+        "description": "Gets a workflow run request history.",
+        "x-ms-examples": {
+          "Get a request history": {
+            "$ref": "./examples/WorkflowRunActionRequestHistories_Get.json"
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/parameters/subscriptionId"
+          },
+          {
+            "name": "resourceGroupName",
+            "description": "The resource group name.",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "workflowName",
+            "description": "The workflow name.",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "runName",
+            "description": "The workflow run name.",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "actionName",
+            "description": "The workflow action name.",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "requestHistoryName",
+            "description": "The request history name.",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "$ref": "#/parameters/api-version"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/RequestHistory"
+            }
+          },
+          "default": {
+            "description": "Error response describing why the operation failed.",
+            "schema": {
+              "$ref": "#/definitions/ErrorResponse"
+            }
+          }
+        }
+      }
+    },
     "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Logic/workflows/{workflowName}/runs/{runName}/actions/{actionName}/scopeRepetitions": {
       "get": {
         "tags": [
@@ -4617,12 +4907,6 @@
             "schema": {
               "$ref": "#/definitions/IntegrationAccountSessionListResult"
             }
-          },
-          "default": {
-            "description": "Logic error response describing why the operation failed.",
-            "schema": {
-              "$ref": "#/definitions/ErrorResponse"
-            }
           }
         },
         "x-ms-pageable": {
@@ -4677,12 +4961,6 @@
             "description": "OK",
             "schema": {
               "$ref": "#/definitions/IntegrationAccountSession"
-            }
-          },
-          "default": {
-            "description": "Logic error response describing why the operation failed.",
-            "schema": {
-              "$ref": "#/definitions/ErrorResponse"
             }
           }
         }
@@ -4748,12 +5026,6 @@
             "schema": {
               "$ref": "#/definitions/IntegrationAccountSession"
             }
-          },
-          "default": {
-            "description": "Logic error response describing why the operation failed.",
-            "schema": {
-              "$ref": "#/definitions/ErrorResponse"
-            }
           }
         }
       },
@@ -4803,12 +5075,6 @@
           },
           "204": {
             "description": "No Content"
-          },
-          "default": {
-            "description": "Logic error response describing why the operation failed.",
-            "schema": {
-              "$ref": "#/definitions/ErrorResponse"
-            }
           }
         }
       }
@@ -4903,7 +5169,6 @@
       "properties": {
         "id": {
           "type": "string",
-          "readOnly": true,
           "description": "The resource id."
         },
         "name": {
@@ -5911,7 +6176,7 @@
             ],
             "x-ms-enum": {
               "name": "DaysOfWeek",
-              "modelAsString": true
+              "modelAsString": false
             }
           },
           "description": "The days of the week."
@@ -6125,7 +6390,7 @@
       ],
       "x-ms-enum": {
         "name": "DayOfWeek",
-        "modelAsString": true
+        "modelAsString": false
       }
     },
     "GenerateUpgradedDefinitionParameters": {
@@ -6713,7 +6978,7 @@
       ],
       "x-ms-enum": {
         "name": "AgreementType",
-        "modelAsString": true
+        "modelAsString": false
       }
     },
     "AgreementContent": {
@@ -7216,8 +7481,8 @@
         "interchangeControlNumberValidityDays",
         "checkDuplicateGroupControlNumber",
         "checkDuplicateTransactionSetControlNumber",
-        "validateEdiTypes",
-        "validateXsdTypes",
+        "validateEDITypes",
+        "validateXSDTypes",
         "allowLeadingAndTrailingSpacesAndZeroes",
         "trimLeadingAndTrailingSpacesAndZeroes",
         "trailingSeparatorPolicy"
@@ -7244,11 +7509,11 @@
           "type": "boolean",
           "description": "The value indicating whether to check for duplicate transaction set control number."
         },
-        "validateEdiTypes": {
+        "validateEDITypes": {
           "type": "boolean",
           "description": "The value indicating whether to Whether to validate EDI types."
         },
-        "validateXsdTypes": {
+        "validateXSDTypes": {
           "type": "boolean",
           "description": "The value indicating whether to Whether to validate XSD types."
         },
@@ -7665,8 +7930,8 @@
       "type": "object",
       "required": [
         "messageId",
-        "validateEdiTypes",
-        "validateXsdTypes",
+        "validateEDITypes",
+        "validateXSDTypes",
         "allowLeadingAndTrailingSpacesAndZeroes",
         "validateCharacterSet",
         "trimLeadingAndTrailingSpacesAndZeroes",
@@ -7677,11 +7942,11 @@
           "type": "string",
           "description": "The message id on which the validation settings has to be applied."
         },
-        "validateEdiTypes": {
+        "validateEDITypes": {
           "type": "boolean",
           "description": "The value indicating whether to validate EDI types."
         },
-        "validateXsdTypes": {
+        "validateXSDTypes": {
           "type": "boolean",
           "description": "The value indicating whether to validate XSD types."
         },
@@ -7822,7 +8087,7 @@
       ],
       "x-ms-enum": {
         "name": "SegmentTerminatorSuffix",
-        "modelAsString": true
+        "modelAsString": false
       }
     },
     "X12DateFormat": {
@@ -8059,8 +8324,8 @@
         "interchangeControlNumberValidityDays",
         "checkDuplicateGroupControlNumber",
         "checkDuplicateTransactionSetControlNumber",
-        "validateEdiTypes",
-        "validateXsdTypes",
+        "validateEDITypes",
+        "validateXSDTypes",
         "allowLeadingAndTrailingSpacesAndZeroes",
         "trimLeadingAndTrailingSpacesAndZeroes",
         "trailingSeparatorPolicy"
@@ -8087,11 +8352,11 @@
           "type": "boolean",
           "description": "The value indicating whether to check for duplicate transaction set control number."
         },
-        "validateEdiTypes": {
+        "validateEDITypes": {
           "type": "boolean",
           "description": "The value indicating whether to Whether to validate EDI types."
         },
-        "validateXsdTypes": {
+        "validateXSDTypes": {
           "type": "boolean",
           "description": "The value indicating whether to Whether to validate XSD types."
         },
@@ -8602,8 +8867,8 @@
       "required": [
         "messageId",
         "enforceCharacterSet",
-        "validateEdiTypes",
-        "validateXsdTypes",
+        "validateEDITypes",
+        "validateXSDTypes",
         "allowLeadingAndTrailingSpacesAndZeroes",
         "trailingSeparatorPolicy",
         "trimLeadingAndTrailingSpacesAndZeroes"
@@ -8617,11 +8882,11 @@
           "type": "boolean",
           "description": "The value indicating whether to validate character Set."
         },
-        "validateEdiTypes": {
+        "validateEDITypes": {
           "type": "boolean",
           "description": "The value indicating whether to validate EDI types."
         },
-        "validateXsdTypes": {
+        "validateXSDTypes": {
           "type": "boolean",
           "description": "The value indicating whether to validate XSD types."
         },
@@ -8741,7 +9006,7 @@
       ],
       "x-ms-enum": {
         "name": "EdifactDecimalIndicator",
-        "modelAsString": true
+        "modelAsString": false
       }
     },
     "IntegrationAccountCertificateListResult": {
@@ -9139,7 +9404,7 @@
       ],
       "x-ms-enum": {
         "name": "EventLevel",
-        "modelAsString": true
+        "modelAsString": false
       },
       "description": "The event level."
     },
@@ -9180,31 +9445,6 @@
           "type": "string"
         }
       }
-    },
-    "AccessKeyRegenerateActionDefinition": {
-      "type": "object",
-      "additionalProperties": false,
-      "required": [
-        "keyType"
-      ],
-      "properties": {
-        "keyType": {
-          "$ref": "#/definitions/AccessKeyType"
-        }
-      }
-    },
-    "AccessKeyType": {
-      "type": "string",
-      "enum": [
-        "NotSpecified",
-        "Primary",
-        "Secondary"
-      ],
-      "x-ms-enum": {
-        "name": "AccessKeyType",
-        "modelAsString": true
-      },
-      "description": "The access key type."
     },
     "SetTriggerStateActionDefinition": {
       "type": "object",
@@ -9688,6 +9928,103 @@
         "recurrence": {
           "$ref": "#/definitions/WorkflowTriggerRecurrence",
           "description": "The recurrence."
+        }
+      }
+    },
+    "RequestHistoryListResult": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/RequestHistory"
+          },
+          "description": "A list of workflow request histories."
+        },
+        "nextLink": {
+          "type": "string",
+          "description": "The URL to get the next set of results."
+        }
+      },
+      "description": "The list of workflow request histories."
+    },
+    "RequestHistory": {
+      "type": "object",
+      "additionalProperties": false,
+      "description": "The request history.",
+      "properties": {
+        "properties": {
+          "$ref": "#/definitions/RequestHistoryProperties",
+          "description": "The request history properties."
+        }
+      },
+      "allOf": [
+        {
+          "$ref": "#/definitions/Resource"
+        }
+      ]
+    },
+    "RequestHistoryProperties": {
+      "type": "object",
+      "additionalProperties": false,
+      "description": "The request history.",
+      "properties": {
+        "startTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "The time the request started."
+        },
+        "endTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "The time the request ended."
+        },
+        "request": {
+          "$ref": "#/definitions/Request",
+          "description": "The request."
+        },
+        "response": {
+          "$ref": "#/definitions/Response",
+          "description": "The response."
+        }
+      }
+    },
+    "Request": {
+      "type": "object",
+      "additionalProperties": false,
+      "description": "A request.",
+      "properties": {
+        "headers": {
+          "$ref": "#/definitions/Object",
+          "description": "A list of all the headers attached to the request."
+        },
+        "uri": {
+          "type": "string",
+          "description": "The destination for the request."
+        },
+        "method": {
+          "type": "string",
+          "description": "The HTTP method used for the request."
+        }
+      }
+    },
+    "Response": {
+      "type": "object",
+      "additionalProperties": false,
+      "description": "A response.",
+      "properties": {
+        "headers": {
+          "$ref": "#/definitions/Object",
+          "description": "A list of all the headers attached to the response."
+        },
+        "statusCode": {
+          "type": "integer",
+          "format": "int32",
+          "description": "The status code of the response."
+        },
+        "bodyLink": {
+          "$ref": "#/definitions/ContentLink",
+          "description": "Details on the location of the body content."
         }
       }
     }
